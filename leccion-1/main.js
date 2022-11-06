@@ -18,7 +18,7 @@ console.log('Probando el log en JavaScript');
 //  que indique si eres mayor de edad.
 
 var nombre = 'Daniel';
-var edad = 63
+var edad = 12;
 var mayorDeEdad = true;
 
 console.log(nombre + ' ' + edad + ' ' + mayorDeEdad);
@@ -135,12 +135,10 @@ for (var i = 0; i < nombrePokemonesDos.length; i++) {
 //  por consola el mensaje ¡Es un pokemon de fuego!.
 
 // Picachú
-// Bulbasaur.
-// Ivysaur.
-// Venusaur.
-// Charmander.
-// Charmeleon.
-// Vulpix.
+// Charmander
+// Bulbasaur
+
+
 
 
 let pokemones = [ 
@@ -167,3 +165,33 @@ if (queTipoDePokemonEs === 'Fuego') {
 } else {
     console.log('No se que tipo de Pokemon es');
 }
+
+
+//Otra forma de hacerlo y mejor
+
+const pokemons = [
+    {
+        nombre: 'squirtle',
+        tipoDePokemon: 'agua'
+    },
+    {
+        nombre: 'pikachu',
+        tipoDePokemon: 'eléctrico'
+    },
+    {
+        nombre: 'charmander',
+        tipoDePokemon: 'fuego'
+    }
+];
+
+pokemons.forEach(pokemon => {
+    if (pokemon.tipoDePokemon === 'fuego') {
+        console.log(`${pokemon.nombre} es un pokemon de fuego!`);
+    }
+});
+
+pokemons.forEach(pokemon => {
+    if (pokemon.tipoDePokemon === 'agua') {
+        console.log(`${pokemon.nombre} es un pokemon de agua`);
+    }
+});
