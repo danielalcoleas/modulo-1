@@ -160,6 +160,23 @@ let pokemones = [
     }
 ]
 
+// SOLUCIÓN SIN BUCLES
+if (pokemones[0].tipo === 'fuego') {
+    console.log('¡Es un pokemon de fuego! 🔥');
+  } else if (pokemones[1].tipo === 'fuego') {
+    console.log('¡Es un pokemon de fuego! 🔥');
+  } else if (pokemones[2].tipo === 'fuego') {
+    console.log('¡Es un pokemon de fuego! 🔥');
+  }
+  
+  // SOLUCIÓNES CON BUCLES:
+  for (let index = 0; index < pokemones.length; index++) {
+    const pokemon = pokemones[index];
+    if (pokemon.tipo === 'fuego') {
+      console.log('¡Es un pokemon de fuego! 🔥');
+    }
+  }
+
 console.log(pokemones);
 
 var queTipoDePokemonEs = pokemones[1].tipoDePokemon;
@@ -169,6 +186,52 @@ if (queTipoDePokemonEs === 'Fuego') {
 } else {
     console.log('No se que tipo de Pokemon es');
 }
+
+pokemones.forEach((pokemon) => {
+  if (pokemon.tipo === 'fuego') {
+    console.log('¡Es un pokemon de fuego! 🔥');
+  }
+});
+
+for (const pokemon of pokemones) {
+  if (pokemon.tipo === 'fuego') {
+    console.log('¡Es un pokemon de fuego! 🔥');
+  }
+}
+
+// SOLUCIÓN CON BUCLE Y DESTRUCTURING
+pokemones.forEach(({ tipo }) => {
+    if (tipo === 'fuego') {
+      console.log('¡Es un pokemon de fuego! 🔥');
+    }
+  });
+  
+  for (const { tipo } of pokemones) {
+    if (tipo === 'fuego') {
+      console.log('¡Es un pokemon de fuego! 🔥');
+    }
+  }
+  
+  // SOLUCIÓN CON BUCLE Y DESTRUCTURING Y CONDICIONAL TERNARIA
+  pokemones.forEach(({ tipo }) => {
+    tipo === 'fuego' ? console.log('¡Es un pokemon de fuego! 🔥') : null;
+  });
+  
+  for (const { tipo } of pokemones) {
+    tipo === 'fuego' ? console.log('¡Es un pokemon de fuego! 🔥') : null;
+  }
+  
+  // SOLUCIÓN CON BUCLE Y DESTRUCTURING Y CONDICIONAL TERNARIA Y CONDICIONAL AND
+  pokemones.forEach(({ tipo }) => {
+    tipo === 'fuego' && console.log('¡Es un pokemon de fuego! 🔥');
+  });
+  
+  for (const { tipo } of pokemones) {
+    tipo === 'fuego' && console.log('¡Es un pokemon de fuego! 🔥');
+  }
+  
+  // SOLUCION EN UNA LINEA
+  pokemones.forEach(({ tipo }) => tipo === 'fuego' && console.log('¡Es un pokemon de fuego! 🔥'));
 
 
 //Otra forma de hacerlo y mejor
