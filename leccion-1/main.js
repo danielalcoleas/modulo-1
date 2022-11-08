@@ -47,11 +47,12 @@ console.log(direccion);
 
 
 
-// var coloresFavoritos = ['azul', 'amarillo', 'rojo'];
+var coloresFavoritos = ['PHP', 'JavaScript', 'Python'];
 
 var lenguajesFavoritos = ['html', 'css', 'JavaScript'];
 var mejorLenguaje = lenguajesFavoritos[0];
 var peorLenguaje = lenguajesFavoritos[2];
+var peorLenguajeDos = lenguajesFavoritos[lenguajesFavoritos.length - 1];
 
 console.log(mejorLenguaje);
 console.log(peorLenguaje);
