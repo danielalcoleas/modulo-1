@@ -70,6 +70,9 @@ var numero2 = 10;
 
 console.log(numero1 + numero2);
 
+const suma = numero1 + numero2;
+console.log({ suma });
+
 var precio = 1000;
 var costo = 400;
 var ganancia = precio - costo;
